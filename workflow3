@@ -1,0 +1,35 @@
+# 1. Build Docker image
+docker build -t img_name .
+
+# 2. Check images
+docker images
+
+# 3. Run Docker container
+docker run -d --name con_name -p 8089:80 img_name
+
+# 4. Check running containers
+docker ps
+
+# 5. Check all containers
+docker ps -a
+
+# 6. Tag Docker image
+docker tag imgid puneeth31/img_name
+
+# 7. Push image to Docker Hub
+docker push puneeth31/img_name
+
+# 8. Pull image from Docker Hub
+docker pull puneeth31/img_name
+
+# 9. Stop container
+docker stop con_name
+
+# 10. Start container
+docker start con_name
+
+# 11. Remove container
+docker rm -f con_name
+
+# 12. Remove image
+docker rmi img_name
