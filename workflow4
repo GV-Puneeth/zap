@@ -1,0 +1,57 @@
+# 1. Create project directory
+mkdir kube_1
+cd kube_1
+
+# 2. Build Docker image
+docker build -t img_name .
+
+# 3. Run Docker container
+docker run -d --name con_name -p 8088:80 img_name
+
+# 4. Check Kubernetes version
+kubectl version
+
+# 5. Get nodes
+kubectl get nodes
+
+# 6. Apply deployment
+kubectl apply -f deployment.yaml
+
+# 7. Check deployments
+kubectl get deployment
+
+# 8. Check pods
+kubectl get pods
+
+# 9. Apply service
+kubectl apply -f service.yaml
+
+# 10. Check services
+kubectl get services
+
+# 11. Scale deployment to 9 replicas
+kubectl scale deployment sanji --replicas=9
+
+# 12. Check pods
+kubectl get pods
+
+# 13. Scale deployment to 3 replicas
+kubectl scale deployment sanji --replicas=3
+
+# 14. Delete a particular pod
+kubectl delete pod pod_name
+
+# 15. Check endpoints
+kubectl get endpoints ssanji
+
+# 16. Check EndpointSlices
+kubectl get endpointslices
+
+# 17. Describe deployment
+kubectl describe deployment sanji
+
+# 18. Delete deployment
+kubectl delete deployment sanji
+
+# 19. Delete service
+kubectl delete service ssanji
